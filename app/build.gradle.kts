@@ -26,9 +26,23 @@ android {
             )
         }
     }
+    //2.- Make sure your app can run our SDK by adding the following configuration (no need to change anything if you already have them)
     compileOptions {
+        // Support for Java 8 features
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
+
+    viewBinding {
+        enable = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -45,4 +59,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Add dependencies
+    implementation(libs.trully.sdk)
+    implementation(libs.trully.doc)
+    coreLibraryDesugaring(libs.desugaring.library)
 }

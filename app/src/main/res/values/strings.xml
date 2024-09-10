@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">activitiesdemo</string>
+    <string name="app_name">TrullyKotlinSDK Demo - Activities</string>
+    <string name="launch_demo">Launch Demo</string>
+    <string name="restart_demo">Reiniciar Demo</string>
+    <string name="result_documents_title">Documento</string>
+    <string name="result_doc">Frente Recortado</string>
+    <string name="result_doc_complete">Frente Completo</string>
+    <string name="result_doc_back">Dorso Recortado</string>
+    <string name="result_doc_back_complete">Dorso Completo</string>
+    <string name="result_selfie_title">Selfie</string>
+    <string name="result_dm_title">Respuesta del Decision Maker</string>
+    <string name="result_label_title">Etiqueta:</string>
 </resources>

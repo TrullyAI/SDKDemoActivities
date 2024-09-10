@@ -16,6 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        //Add jitpack so you can download our SDK
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
