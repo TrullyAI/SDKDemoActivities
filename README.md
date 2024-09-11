@@ -4,9 +4,9 @@ SDK version 3.0.0
 
 ## How to use it
 
-1.- Clone this repository
-2.- Sync gradle
-3.- Replace apiKey
-4.- Run
+ 1. Clone this repository 
+ 2. Sync gradle 
+ 3. Replace apiKey 
+ 4. Run
 
-# ⚠️ Make sure you replace 'YOUR_API_KEY' with the apiKey provided by costumer services
+### ⚠️ Make sure you replace 'YOUR_API_KEY' with the apiKey provided by costumer services
