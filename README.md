@@ -1,5 +1,6 @@
 # SDK Demo
 This demo was created following the steps detailed in the [Docs](https://github.com/TrullyAI/TrullyDocs)
+SDK version 3.0.0
 
 ## How to use it
 

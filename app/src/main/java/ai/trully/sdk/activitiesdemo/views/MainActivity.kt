@@ -44,11 +44,11 @@ class MainActivity : AppCompatActivity(), TrullyListeners {
     }
 
     override fun onResult(response: TrullyResponse) {
-        val selfie = response.images?.selfieStr?.let { base64ToBitmap(it) }
-        val doc = response.images?.documentStr?.let { base64ToBitmap(it) }
-        val docComplete = response.images?.documentCompleteStr?.let { base64ToBitmap(it) }
-        val docBack = response.images?.documentBackStr?.let { base64ToBitmap(it) }
-        val docBackComplete = response.images?.documentBackCompleteStr?.let { base64ToBitmap(it) }
+        val selfie = response.image?.let { base64ToBitmap(it) }
+        val doc = response.document_image?.let { base64ToBitmap(it) }
+        val docComplete = response.document_image_complete?.let { base64ToBitmap(it) }
+        val docBack = response.document_image_back?.let { base64ToBitmap(it) }
+        val docBackComplete = response.document_image_back_complete?.let { base64ToBitmap(it) }
 
         val imagesBitmap = ImagesBitmap(
             selfie,
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), TrullyListeners {
             docBackComplete
         )
 
-        val label: String = response.shortResponse?.label ?: ""
+        val label: String = response.label ?: ""
 
         ResponseData.getInstance().init(
             imagesBitmap, label
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity(), TrullyListeners {
 
     private fun runTrullyKotlinSDK() {
         val config = TrullyConfig(environment = Environment.DEBUG, userID = "TRULLYKOTLINSDK_DEMO_ACTIVITIES")
-        TrullySdk.init(apiKey = "9zODjQTn8G5QiyKy1swg3aehp3x96zgQ7MNbQq3z", config = config)
+        TrullySdk.init(apiKey = "YOUR_API_KEY", config = config)
         TrullySdk.start(packageContext = this, listener = this)
     }
 
